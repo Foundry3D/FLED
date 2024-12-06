@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "(game) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/Deployment/AnimaSprite.com",
+        "args": [  ],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}/Deployment",
+        "preLaunchTask": "Build game"
+      },
+      {
+        "type": "luau",
+        "request": "attach",
+        "name": "attach to luau debugger",
+        "address": "localhost",
+        "port": 58000
+      },
+      {
+        "name": "(knob) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/knob",
+        "args": ["clean"],
+        "stopAtEntry": false,
+        "cwd": "${workspaceRoot}",
+        "preLaunchTask": "Build knob"
+      }
+    ]
+        
+    
+}

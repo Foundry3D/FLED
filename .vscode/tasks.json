@@ -1,0 +1,51 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build game",
+            "type": "shell",
+            "command": "${workspaceRoot}/knob",//"${workspaceFolder}/Tools/windows_x64/zig.exe",
+            "args": [
+                "clean"
+            ],
+            "dependsOn":[
+                "Build knob"
+            ],
+        },
+        {
+            "label": "Build and run game",
+            "type": "shell",
+            "command": "${workspaceRoot}/Deployment/FLED.com",//"${workspaceFolder}/Tools/windows_x64/zig.exe",
+            "args": [
+                "58000",
+                "${workspaceRoot}/Deployment/data/main.lua"
+            ],
+            "dependsOn":[
+                "Build game"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build knob",
+            "type": "shell",
+            "command": "zig",//"${workspaceFolder}/Tools/windows_x64/zig.exe",
+            "args": [
+                "cc",
+                "-DCONFIGURED",
+                "-std=c11",
+                "--debug",
+                "-fno-sanitize=undefined",
+                "-fno-omit-frame-pointer",
+                "-I${workspaceFolder}",
+                "${workspaceFolder}/knob.c",
+                "-o",
+                "knob"
+            ],
+        },
+    ]
+}

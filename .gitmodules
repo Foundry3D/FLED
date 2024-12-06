@@ -1,0 +1,9 @@
+[submodule "Libraries/luau-debugger"]
+	path = Libraries/luau-debugger
+	url = https://github.com:Foundry3D/luau-debugger.git
+[submodule "Libraries/cppdap"]
+	path = Libraries/cppdap
+	url = https://github.com/Foundry3D/cppdap.git
+[submodule "Libraries/luau"]
+	path = Libraries/luau
+	url = https://github.com/Foundry3D/luau.git

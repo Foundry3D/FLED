@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/build",
+                "${workspaceFolder}/Libraries/raylib/src",
+                "${workspaceFolder}/Libraries/raylib/src",
+                "${workspaceFolder}/Libraries/rlImGui",
+                "${workspaceFolder}/Libraries/imgui",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/Libraries/nativefiledialog-extended/src/include"
+            ],
+            "defines": [
+                "RAYLIB_PROVIDER"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
