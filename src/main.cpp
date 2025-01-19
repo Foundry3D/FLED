@@ -36,8 +36,11 @@ int main(int argc, char **argv) {
     runtime.setErrorHandler(error_handler);
     runtime.installLibrary();
     runtime.installDebugger(&debugger);
-    int result = runtime.runFile(argv[2]);
+    
+    luau::Bridge bridge;
+    bridge.Init(&runtime);
 
+    int result = runtime.runFile(argv[2]);
 #if defined(MULTIPLY_VM_TEST)
     luau::Runtime runtime2;
     runtime2.setErrorHandler(error_handler);
